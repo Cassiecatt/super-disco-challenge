@@ -52,35 +52,4 @@ function checkIfTimePassed() {
 
 
 
-// // function - change color based on past present and future
-// function checkIfTimePassed() {
-//     //variables
-//     let hours = $(".hour") //selecting div with (ex 9AM, etc)
-//     let hour = moment().hour() // current hour
-//     let ids = $(".description") // selecing textarea with descritpion class
-   
-//     $(".time-block > textarea").each(function(){
-//         var blockHour =
-//     })
-
-
-//     for (let i = 0; i < ids.length; i++) {
-//         var times = ids[i].getAttribute("id").split("-")[1]
-//         //console.log(ids[i].getAttribute("id").split("-")[1]);
-//         if(times < hour) {
-//             ids[i].classList.add("past");
-//         }
-//         else if (times === hour) {
-//             ids[i].classList.remove("past");
-//             ids[i].classList.add("present");
-//         }
-//         else {
-//             ids[i].classList.remove("past");
-//             ids[i].classList.remove("present");
-//             ids[i].classList.add("future");
-//         }
-
-//     }
-// }
-// checkIfTimePassed();
 
