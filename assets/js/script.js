@@ -3,6 +3,7 @@
 // save description to local storage when user clicks save button
 $(document).ready(function() {
     var btnArray = $(".saveBtn");
+    // console.log(btnArray);
     btnArray.each(function(index) {
       // by default, index starts at 0. We need to start it at 9
       var myIndex = index;
@@ -26,6 +27,23 @@ var currentDate = moment().format("dddd, MMMM, Do, YYYY");
 $("#currentDay").text(currentDate);
 
 
+// function - change color based on past present and future
+function checkIfTimePassed() {
+    var currentHour = moment().hours();
+    $(".time-block > textarea").each(function(){
+        var hour = parseInt($(this).attr("id").split("-")[1]);
+        if (hour < currentHour) {
+            $(this).addClass("past");
+        }
+        else if (hour === currentHour) {
+            $(this).addClass("present");
+        }
+        else {
+            $(this).addClass("future");
+        }
+    });
+  }
+  checkIfTimePassed()
 
 
 
@@ -33,4 +51,36 @@ $("#currentDay").text(currentDate);
 
 
 
+
+// // function - change color based on past present and future
+// function checkIfTimePassed() {
+//     //variables
+//     let hours = $(".hour") //selecting div with (ex 9AM, etc)
+//     let hour = moment().hour() // current hour
+//     let ids = $(".description") // selecing textarea with descritpion class
+   
+//     $(".time-block > textarea").each(function(){
+//         var blockHour =
+//     })
+
+
+//     for (let i = 0; i < ids.length; i++) {
+//         var times = ids[i].getAttribute("id").split("-")[1]
+//         //console.log(ids[i].getAttribute("id").split("-")[1]);
+//         if(times < hour) {
+//             ids[i].classList.add("past");
+//         }
+//         else if (times === hour) {
+//             ids[i].classList.remove("past");
+//             ids[i].classList.add("present");
+//         }
+//         else {
+//             ids[i].classList.remove("past");
+//             ids[i].classList.remove("present");
+//             ids[i].classList.add("future");
+//         }
+
+//     }
+// }
+// checkIfTimePassed();
 
