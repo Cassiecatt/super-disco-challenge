@@ -1,6 +1,6 @@
 
 
-// saving description when user clicks save button
+// save description to local storage when user clicks save button
 $(document).ready(function() {
     var btnArray = $(".saveBtn");
     btnArray.each(function(index) {
@@ -19,6 +19,12 @@ $(document).ready(function() {
       $("#data-" + i).val(textvalue); //how to change value of elements in jquery; data is where we want to put the data
     }
   });
+
+// Pushing date into empty P tag in Jumbotron
+var currentDate = moment().format("dddd, MMMM, Do, YYYY");
+//console.log(currentDate);
+$("#currentDay").text(currentDate);
+
 
 
 
